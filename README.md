@@ -1,4 +1,4 @@
-# assign1
-CS161 Week One Assignment ~ 
- Prompts user for a four digit integer 
-~ Prints out the individual digit that make up the number 
+# CS161 
+CS161 ~ 
+ Assignment and Practice Porblems 
+~ To challenge myself as both a CS student and JS developer, I Code each assigmnet in JavaScrip and C++  
