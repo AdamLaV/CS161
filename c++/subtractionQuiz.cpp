@@ -25,10 +25,10 @@ int main()
 
     //4. Grade the asnwer and display the result
     if (number1 - number2 == answer) {
-        cout << "You are correct!" << endl;;
+        cout << "You are correct! 🙉" << endl;;
     }
     else {
-            cout << "Your answer is wrong. " << number1 << " - " << number2
+            cout << "Your answer is wrong. 🙈 " << number1 << " - " << number2
                  << " should be " << (number1 -  number2) << endl;
         }
 }
