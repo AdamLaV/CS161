@@ -16,13 +16,14 @@ int main()
     cin >> APR;
 
     //Compute interest
-    interestRate = APR / 12;
+   // interestRate = APR / 12;
     cout << "Month " << " Int." << setw(8) << "Pay \t" << "Balance \n";
 
     while (balance >= 0) {
-        cout << month << "   " << setw(8) << interestRate << setw(8) << payment << "\t" << balance << endl;
-        balance = balance - payment + interestRate;
+        cout << fixed << setprecision(2) << month << "   " << setw(8) << interestRate << setw(8) << payment << "\t" << balance << endl;
         month++;
+        interestRate = APR / 100 / 12 * balance;
+        balance = balance - payment + interestRate;
     }
 
     return 0;
