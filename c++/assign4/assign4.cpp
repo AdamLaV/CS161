@@ -20,7 +20,7 @@ int main()
     while (balance >= 0) {
         cout << fixed << setprecision(2) << month << "   " << setw(8) << interestRate << setw(8) << payment << "\t" << balance << endl;
         month++;
-        interestRate = APR / 100 / 12 * balance;
+        interestRate = (APR / 100) / 12 * balance;
         balance = balance - payment + interestRate;
     }
 
