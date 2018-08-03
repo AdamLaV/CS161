@@ -15,10 +15,8 @@ int main()
     cout << "Enter APR: ";
     cin >> APR;
 
-    //Compute interest
-   // interestRate = APR / 12;
+    //Display Reslut to user 
     cout << "Month " << " Int." << setw(8) << "Pay \t" << "Balance \n";
-
     while (balance >= 0) {
         cout << fixed << setprecision(2) << month << "   " << setw(8) << interestRate << setw(8) << payment << "\t" << balance << endl;
         month++;
