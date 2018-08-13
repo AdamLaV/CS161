@@ -13,6 +13,7 @@ int main()
 
     while (!input.eof()) {
         input >> firstName >> mi >> lastName >> score;
+        if(input.eof()) break;
         cout << firstName << " " << mi << " " << lastName << " " << score << endl;
     }
 
@@ -21,4 +22,3 @@ int main()
     cout << "Done!" << endl;
 
     return 0;
-}
