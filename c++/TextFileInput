@@ -11,11 +11,10 @@ int main()
     char mi;
     int score;
 
-    input >> firstName >> mi >> lastName >> score;
-    cout << firstName << " " << mi << " " << lastName << " " << score << endl;
-
-    input >> firstName >> mi >> lastName >> score;
-    cout << firstName << " " << mi << " " << lastName << " " << score << endl;
+    while (!input.eof()) {
+        input >> firstName >> mi >> lastName >> score;
+        cout << firstName << " " << mi << " " << lastName << " " << score << endl;
+    }
 
     input.close();
 
