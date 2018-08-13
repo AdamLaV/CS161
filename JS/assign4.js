@@ -1,7 +1,6 @@
 let balance = 1000;
 let payment = 150;
-let APR = 19.9, interestRate = 0;
-let month = 0;
+let APR = 19.9, interestRate = 0, month = 0;
 
 // Compute output
 console.log('Month  ' + ' int    ' + ' Pay ' + ' balance ');
