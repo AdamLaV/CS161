@@ -1,0 +1,159 @@
+html,
+body {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: #FEFEFE;
+	width: 100%;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1024px;
+	height: auto;
+	min-height: 1024px;
+	position: relative;
+	margin: 0 auto;
+	background-color: rgba(255, 255, 255, 1.0);
+
+}
+
+.head {
+	background-image: url(img/header.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	height: 348px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.head:after {
+	content: '';
+	position: inherit;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(76, 58, 82, 0.27);
+}
+
+.head:after {
+	opacity: .6;
+}
+
+
+h1 {
+	text-align: center;
+	font-size: 24px;
+	font-weight: 800;
+	color: #FFFFFF;
+	letter-spacing: 1.5px;
+	margin-top: 130px;
+}
+
+h5 {
+	text-align: center;
+	font-family: OpenSans-Semibold;
+	font-size: 12px;
+	color: #FFFFFF;
+	padding-top: 138px;
+}
+
+.payoff-input {
+	background: #FFFFFF;
+	-webkit-box-shadow: 0 24px 62px 0 rgba(69, 49, 76, 0.17);
+	box-shadow: 0 24px 62px 0 rgba(69, 49, 76, 0.17);
+	position: relative;
+	width: 746px;
+	height: 410px;
+	margin: 0 auto;
+	top: 400px;
+	left: 0;
+}
+
+
+.user-input {
+	position: absolute;
+	margin: 70px 87px 67px 189px;
+	padding: 0 auto;
+	font-size: 18px;
+	font-weight: 400;
+	width: 470px;
+	height: 190px;
+}
+
+.form-block {
+	margin-top: 39px;
+}
+
+label {
+	margin-right: 18px;
+}
+
+input {
+	font-size: 18px;
+	width: 309px;
+	height: 38px;
+	background: #F7F7F7;
+	border: 2px solid #45314C;
+}
+
+.payoffsubmit {
+	background-color: rgba(255, 255, 255, 0.0);
+	margin: 0;
+	height: 127px;
+	left: 329px;
+	position: absolute;
+	top: 903px;
+	width: 408px;
+	/* IE 9 */
+	-webkit-transform: rotate(0deg);
+	/* Chrome, Safari, Opera */
+	transform: rotate(0deg);
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.payoffsubmit:hover {
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.payoffsubmit #submit {
+	background-color: rgba(107, 82, 107, 1.0);
+	margin: 0;
+	height: 60px;
+	width: 355px;
+	/* IE 9 */
+	-webkit-transform: rotate(0deg);
+	/* Chrome, Safari, Opera */
+	transform: rotate(0deg);
+}
+
+#submit {
+	text-align: center;
+	font-size: 28px;
+	font-weight: 100;
+	letter-spacing: 2px;
+	color: #FFFFFF;
+}
