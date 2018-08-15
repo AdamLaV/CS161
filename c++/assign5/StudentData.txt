@@ -1,0 +1,10 @@
+Kareem	Holman	kholman4@my.chemeketa.edu	72	80	100	70	82	55	88	65	
+Brady	Hooper	bhooper2@my.chemeketa.edu	99	98	92	88	100	90	80	94	
+Wilma	Kirby	wkirby7@my.chemeketa.edu	90	100	98	90	97	70	70	68	
+Jada	Lawrence	jlawren3@my.chemeketa.edu	60	100	92	92	86	94	68	85	
+Elliott	Burnett	eburnet@my.chemeketa.edu	92	88	94	91	88	84	75	90	
+Drew	Bean	dbean6@my.chemeketa.edu	88	55	95	92	76	96	99	100	
+Aurelia	Stuart	astuart5@my.chemeketa.edu	100	64	93	75	100	94	97	82	
+Clinton	Lynn	clynn@my.chemeketa.edu	70	98	94	91	50	70	100	100	
+Nora	Henderson	nhender6@my.chemeketa.edu	85	100	60	100	91	98	97	75	
+Ashton	Townsend	atownse4@my.chemeketa.edu	84	97	91	64	100	76	72	55	
