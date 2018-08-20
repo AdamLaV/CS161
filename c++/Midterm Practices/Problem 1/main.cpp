@@ -11,26 +11,28 @@ int main()
     cout << "Enter Grade: ";
     cin >> grade;
 
-    //A condition 100 - 90 & 100 - 85
+    // Major Students
     if(status == major && grade >= 90) {
         cout << "A" << endl;
+        else if (grade >= 70) {
+                cout << "C" << endl;
+        }
+        else {
+            cout << "F" << endl;
+        }
     }
+
+    // non major students
     else if (status != major && grade >= 85) {
         cout << "A" << endl;
+        else if (grade >= 60) {
+            cout << "C" << endl;
+        }
+        else {
+            cout << "F" << endl;
+        }
     }
 
-    //C condition 89 - 70 & 84 - 60
-    else if (status == major && grade >= 70)
-        cout << "C" << endl;
-    else if (status != major && grade >= 60) {
-        cout << "C" << endl;
-    }
-
-    //F condition 69 - 0 & 59 - 0
-    else if (status == major && grade <= 69)
-        cout << "F" << endl;
-    else if (status != major && grade <= 59) {
-        cout << "F" << endl;
-    }
     return 0;
 }
+
