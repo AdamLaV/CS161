@@ -6,7 +6,7 @@ int main()
 {
     char status, major = 'm';
     int grade;
-    cout << "Enter Status M or N: ";
+    cout << "Enter Status m or n: ";
     cin >> status;
     cout << "Enter Grade: ";
     cin >> grade;
