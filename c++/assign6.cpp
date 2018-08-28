@@ -7,14 +7,20 @@ using namespace std;
 string getInput(const string& prompt);
 string getCardType(const string& cardNumber);
 int strToInt(string digit);
+bool isValid(const string& cardNumber);
+
 int main()
 {
 
     string cardnumber = getInput("Enter Card Number: ");
-   // int cardDigits = strToInt(cardnumber);
-    //cout << cardDigits << endl;
     string cardnumberType = getCardType(cardnumber);
-    cout << cardnumberType << endl;
+    bool cardNumberValid = isValid(cardnumber);
+    if(cardNumberValid == true) {
+        cout << "Valid Number, " << cardnumberType << endl;
+    }
+    else {
+        cout << "Not a Valid Number, " << cardnumberType << endl;
+    }
 
     return 0;
 }
@@ -40,9 +46,19 @@ string getCardType(const string& cardNumber) {
         cardType = "AMERICAN EXPRESS";
     }
     else {
-        cardType = "UNKNOWN";
+        cardType = "UNKNOWN ISSUER";
     }
     return cardType;
+}
+
+// Returns true/false indicating if a credit card number is potentially a valid number...
+bool isValid(const string& cardNumber) {
+    bool validNumber = false;
+    if(cardNumber.at(0) == '1') {
+        validNumber = true;
+    }
+
+    return validNumber;
 }
 
 // Turns a string like '3333' into the number it represents (3333)
