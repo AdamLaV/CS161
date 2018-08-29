@@ -2,12 +2,15 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
+#include <stdio.h>
 using namespace std;
 
 string getInput(const string& prompt);
 string getCardType(const string& cardNumber);
-int strToInt(string digit);
+int charToInt(char digit);
 bool isValid(const string& cardNumber);
+int sumOfDigits(const string& CardNumber);
+int doubleDigitValue(int number);
 
 int main()
 {
@@ -22,8 +25,14 @@ int main()
         cout << "Not a Valid Number, " << cardnumberType << endl;
     }
 
+    int num = sumOfDigits(cardnumber);
+    cout << num + 3 << endl;
+
     return 0;
 }
+
+
+
 
 // Takes in a string, prints it then get input and returns the input
 string getInput(const string& prompt) {
@@ -62,8 +71,29 @@ bool isValid(const string& cardNumber) {
 }
 
 // Turns a string like '3333' into the number it represents (3333)
-int strToInt(string digits) {
-    int stringDigit = atoi(digits.c_str());
-    return stringDigit;
+int charToInt(char digit) {
+    int charDigit = digit-'0';
+    return charDigit;
+}
+
+// Sums the digits of a credit card number
+int sumOfDigits(const string& CardNumber) {
+    int cardDigits, sum = 0, evenSum = 0, oddSum = 0;
+    int myArray[16];
+
+    // loop backwards through cardNumber
+    for(int i = CardNumber.length() - 1; i >= 0; i--) {
+        cardDigits = charToInt(CardNumber.at(i));
+        myArray[i] = cardDigits;
+    }
+
+    return cardDigits;
+}
+
+//Process a number to be doubled
+int doubleDigitValue(int number) {
+    int myArray = number;
+    return myArray;
+
 }
 
