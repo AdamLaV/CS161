@@ -92,8 +92,8 @@ int sumOfDigits(const string& CardNumber) {
 
 //Process a number to be doubled
 int doubleDigitValue(int number) {
-    int myArray[] = number;
-    return myArray;
+  //  int myArray[] = number;
+  //  return myArray;
 
 }
 
