@@ -26,23 +26,32 @@ char getLetterGrade(const int score, double mean, double stdDev) {
     char grade;
 
     // below average students
-    double stdDivid = (mean - score);
+    double stdDivid = 0.0;
     if(score < mean) {
-        //stdDivid = (mean - score);
+        stdDivid = (mean - score);
         if(stdDivid / stdDev >= 1.0) {
             grade = 'F';
         }
         else if(stdDivid / stdDev >= 0.5) {
             grade = 'D';
         }
-        else {
+        else if(stdDivid / stdDev < 0.5) {
             grade = 'C';
         }
     }
+
+    // above average students
     if(score > mean) {
-        grade = 'B';
+        stdDivid = (score - mean);
+        if(stdDivid / stdDev >= 0.5) {
+            grade = 'B';
+        }
+        if(stdDivid / stdDev >= 1.0) {
+            grade = 'A';
+        }
+        else if(stdDivid / stdDev < 0.5) {
+            grade = 'C';
+        }
     }
     return grade;
-    //mean = mean * stdDev + score;
-
 }
