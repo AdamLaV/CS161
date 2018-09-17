@@ -1,8 +1,8 @@
 #include <iostream>
-#include "GradeFunctions.h"
 #include <iomanip>
 #include <cmath>
 #include <cstdlib>
+#include "GradeFunctions.h"
 using namespace std;
 
 // students data function
