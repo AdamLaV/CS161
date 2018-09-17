@@ -14,7 +14,7 @@ void getArrayData(int scores[], int size) {
 
 }
 
-//average function
+// average function
 double average(const int scores[], int size) {
     double average = 0.0;
     for (int i = 0; i < size; i++)
