@@ -34,4 +34,5 @@ double standardDeviation(const int scores[], int size, double mean);
  */
 char getLetterGrade(const int score, double mean, double stdDev);
 
+
 #endif // GRADEFUNCTIONS_H
