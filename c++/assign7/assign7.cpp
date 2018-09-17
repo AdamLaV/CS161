@@ -5,7 +5,6 @@
 #include <cstdlib>
 using namespace std;
 
-
 int main()
 {
     // gather students data
@@ -26,8 +25,8 @@ int main()
     while(counter < NUM_OF_STUDENTS) {
         counter++;
         cout << counter << "  ";
-    }
-    // end
+    } 
+    // end printing
 
     // assign a letter grade to each student
      cout << "\n" << "Grade:    ";
@@ -39,7 +38,6 @@ int main()
         cout << letterGrade << "  ";
     }
     // complete grading
-
 
     return 0;
 }
