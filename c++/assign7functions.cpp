@@ -1,3 +1,14 @@
+// students data function
+void getArrayData(int scores[], int size) {
+    string studentsData;
+    cout << "Enter 10 scores: ";
+    getline(cin, studentsData);
+    for(int i = 0; i < size; i++) {
+        scores[i] = atoi(studentsData[i].c_str());
+    }
+
+}
+
 //average function
 double average(const int scores[], int size) {
     double average = 0.0;
