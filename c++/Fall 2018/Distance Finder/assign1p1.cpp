@@ -17,6 +17,7 @@ int main()
     cout << "Enter the number of inches: ";
     cin >> inches;
 
+    // compute result with distance finder function 
     DistanceFinder(inches);
 
 
