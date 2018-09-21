@@ -1,5 +1,5 @@
 /**
-  * @brief Assignment 1 Problem 1
+  * @brief Assignment 1 Problem 2
   * @author Francis
   */
 #include <iostream>
