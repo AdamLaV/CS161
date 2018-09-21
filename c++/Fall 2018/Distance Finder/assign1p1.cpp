@@ -1,12 +1,14 @@
+/**
+  * @brief Assignment 1 Problem 1
+  * @author Francis
+  */
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-
 using namespace std;
 
-int getMiles(int inches);
-int getYards(int inches);
-int getFeet(int inches);
+// distance finder function
+void DistanceFinder(int inches);
 
 int main()
 {
@@ -14,37 +16,20 @@ int main()
     int inches;
     cout << "Enter the number of inches: ";
     cin >> inches;
-    double miles = getMiles(inches);
-    double yards = getYards(inches);
-    double foot = getFeet(inches);
-    cout << fixed << setprecision(0) << miles << " mile(s)" << "\n"
-         << yards << " yard(s)" << "\n" << foot << " foot/feet";
+
+    DistanceFinder(inches);
 
 
     return 0;
 }
 
-// miles function
-int getMiles(int inches) {
-    const double mi = 0.000015783;
-    double miles;
-    miles = inches * mi;
-
-    return miles;
-}
-
-// yards function
-int getYards(int inches) {
-    const double yd = 0.027778;
+// distnace finder function
+void DistanceFinder(int inches) {
+    const double mi = 0.000015783, yd = 0.027778, ft = 0.083333;
+    double miles = inches * mi;
     double yards = inches * yd;
-
-    return yards;
-}
-
-// foot/feet function
-int getFeet(int inches) {
-    const double ft = 0.083333;
     double foot = inches * ft;
 
-    return foot;
+    cout << fixed << setprecision(0) << miles << " mile(s)" << "\n"
+         << yards << " yard(s)" << "\n" << foot << " foot/feet" << "\n" << inches << " inch(es)" << endl;
 }
