@@ -23,7 +23,7 @@ int main()
     return 0;
 }
 
-// distnace finder function
+// distance finder function
 void DistanceFinder(int inches) {
     const double mi = 0.000015783, yd = 0.027778, ft = 0.083333;
     double miles = inches * mi;
