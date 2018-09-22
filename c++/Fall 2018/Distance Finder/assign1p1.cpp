@@ -20,7 +20,6 @@ int main()
     // compute result with distance finder function 
     DistanceFinder(inches);
 
-
     return 0;
 }
 
