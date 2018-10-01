@@ -1,4 +1,5 @@
-//  Read in two integers from the console. If they are different, print their sum. If they are the same, print double their sum.
+// Read in two integers from the console. If they are different, print their sum. 
+// If they are the same, print double their sum.
 #include <iostream>
 using namespace std;
 
