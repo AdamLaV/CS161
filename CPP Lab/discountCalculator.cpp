@@ -7,6 +7,7 @@ using namespace std;
 int main()
 {
     double orderPrice, discount;
+	cout << "Enter Order Price: ";
 	cin >> orderPrice;
 	
 	if (orderPrice >= 100) {
