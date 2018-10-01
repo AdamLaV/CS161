@@ -1,4 +1,4 @@
-//  Write a program to read in the duration of a call as an integer and output the total cost as a decimal. Do not worry about making it look like money.
+//  Write a program to read in the duration of a call as an integer and output the total cost as a decimal.
 #include <iostream>
 using namespace std;
 
