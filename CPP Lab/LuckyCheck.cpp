@@ -1,5 +1,4 @@
 // Read in a single integer from cin. If it is 7, output "Lucky". If it is not 7, output nothing.
-
 #include <iostream>
 using namespace std;
 
