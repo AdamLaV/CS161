@@ -25,6 +25,7 @@ int main()
 
 // distance finder function
 void DistanceFinder(int inches) {
+ // constant numbers for calculating miles, yead and feet. Adopted from w3schools
     const double mi = 0.000015783, yd = 0.027778, ft = 0.083333;
     double miles = inches * mi;
     double yards = inches * yd;
