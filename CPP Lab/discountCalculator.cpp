@@ -1,6 +1,5 @@
 //Orders from a company that cost $100 or more get a 10% discount. Orders less than $100 do not get a discount.
 //Read in an decimal value representing the undiscounted order price, and print out what the order should cost.
-
 #include <iostream>
 using namespace std;
 
