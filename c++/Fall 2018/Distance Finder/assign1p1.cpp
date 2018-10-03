@@ -1,6 +1,6 @@
 /**
   * @brief Assignment 1 Problem 1
-  * @author Daidemang Francis
+  * @author Francis
   */
 #include <iostream>
 #include <cmath>
