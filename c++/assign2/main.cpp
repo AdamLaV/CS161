@@ -1,6 +1,6 @@
 /**
   * @brief Assignment 2
-  * @author Daidemang Francis
+  * @author Francis
   */
 
 #include <iostream>
