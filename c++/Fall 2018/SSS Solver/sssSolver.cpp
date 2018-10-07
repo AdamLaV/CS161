@@ -21,13 +21,13 @@ int main()
 
     // compute the three angles
     double angle1, angle2, angle3;
-    double const angleInRadians = 180 / 3.1415927; // value of pi = 3.1415927
+    const double angleInRadians = 180 / 3.1415927; // value of pi = 3.1415927
     angle1 = acos((length1 * length1 - length2 * length2 - length3 * length3) / (-2 * length2 *length3));
     angle2 = acos((length2 * length2 - length1 * length1 - length3 * length3) / (-2 * length1 *length3));
     angle3 = acos((length3 * length3 - length2 * length2 - length1 * length1) / (-2 * length1 *length2));
 
     // classifies the triangle
-    double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
+    double SumOfAngle = ((angle1 + angle2 + angle3) * angleInRadians );
     string AngleType;
     // Acute angle
     if (SumOfAngle > 0 && SumOfAngle < 90 ) {
