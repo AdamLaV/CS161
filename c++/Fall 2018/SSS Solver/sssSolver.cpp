@@ -27,9 +27,8 @@ int main()
     angle3 = acos((length3 * length3 - length2 * length2 - length1 * length1) / (-2 * length1 *length2));
 
     // classifies the triangle
-    int SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
+    double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
     string AngleType;
-
     // Acute angle
     if (SumOfAngle > 0 && SumOfAngle < 90 ) {
         AngleType = "Acute";
@@ -39,7 +38,7 @@ int main()
         AngleType = "Obtuse";
     }
     // Right angle
-    else if (SumOfAngle == 90) {
+    else if (SumOfAngle == 180) {
         AngleType = "Right";
     }
 
@@ -48,7 +47,6 @@ int main()
     }
 
     // output the result
-
     if(AngleType == "Acute" || AngleType == "Obtuse" || AngleType == "Rigt") {
         cout << fixed << setprecision(4) << "Angle 1: " << angle1 * angleInRadians << "\n"
              << "Angle 2: " << angle2 * angleInRadians << "\n"
