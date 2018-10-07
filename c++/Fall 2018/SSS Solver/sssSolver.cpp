@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <math.h>
 #include <iomanip>
 using namespace std;
 
@@ -27,24 +28,9 @@ int main()
     angle3 = acos((length3 * length3 - length2 * length2 - length1 * length1) / (-2 * length1 *length2));
 
     // classifies the triangle
-    double SumOfAngle = ((angle1 + angle2 + angle3) * angleInRadians );
+    double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
     string AngleType;
-    // Acute angle
-    if (SumOfAngle > 0 && SumOfAngle < 90 ) {
-        AngleType = "Acute";
-    }
-    // Obtuse angle
-    else if (SumOfAngle > 90 && SumOfAngle < 180) {
-        AngleType = "Obtuse";
-    }
-    // Right angle
-    else if (SumOfAngle == 180) {
-        AngleType = "Right";
-    }
-
-    else {
-        AngleType = "Impossible Triangle";
-    }
+    
 
     // output the result
     if(AngleType == "Acute" || AngleType == "Obtuse" || AngleType == "Rigt") {
@@ -55,6 +41,10 @@ int main()
     else {
         cout << AngleType << endl;
     }
+
+    double name = 67.3801 + 22.6199 + 90;
+
+    cout << name << endl;
 
 
 
