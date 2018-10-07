@@ -27,7 +27,7 @@ int main()
     angle2 = acos((length2 * length2 - length1 * length1 - length3 * length3) / (-2 * length1 *length3));
     angle3 = acos((length3 * length3 - length2 * length2 - length1 * length1) / (-2 * length1 *length2));
 
-    // classifies the triangle
+    // classifies the triangle -- not completed
     double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
     string AngleType;
     
