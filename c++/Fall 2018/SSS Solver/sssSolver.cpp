@@ -28,6 +28,8 @@ int main()
     angle3 = acos((length3 * length3 - length2 * length2 - length1 * length1) / (-2 * length1 *length2));
 
     // classifies the triangle -- not completed
+    // Use the lengths to classify the triangle as acute, right, or obtuse 
+ 
     double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
     string AngleType;
     
