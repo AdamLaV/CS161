@@ -4,4 +4,5 @@ CS161 ~
 
 ~ C++ and JavaScript solutions   
 
-CPPLAB has been moved [here](https://github.com/francisknight/CPP-Tidbits)
+CPPLAB has been moved 👉 [CPP-Tidbits
+](https://github.com/francisknight/CPP-Tidbits)
