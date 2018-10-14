@@ -37,7 +37,7 @@ int main()
     else if (pow(lengthTwo, 2) < pow(lengthOne, 2) + pow(lengthTwo, 2)) {
          angleName = "Obtuse";
     }
-    else if (pow(lengthOne, 2) + pow(lengthTwo, 2) == pow(lengthThree, 2)) {
+    else if (pow(lengthThree, 2) == pow(lengthOne, 2) + pow(lengthTwo, 2)) {
         angleName = "Right";
     }
     else {
