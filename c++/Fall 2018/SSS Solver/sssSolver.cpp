@@ -29,6 +29,7 @@ int main()
 
     // classifies the triangle -- not completed
     // Use the lengths to classify the triangle as acute, right, or obtuse 
+ // problem not completed
     string angleName;
     if(pow(lengthOne, 2) + pow(lengthTwo, 2) > pow(lengthThree, 2)) {
         angleName = "Acute";
