@@ -29,26 +29,28 @@ int main()
 
     // classifies the triangle -- not completed
     // Use the lengths to classify the triangle as acute, right, or obtuse 
- 
-    double SumOfAngle = (angle1 + angle2 + angle3) * angleInRadians;
-    string AngleType;
-    
-
-    // output the result
-    if(AngleType == "Acute" || AngleType == "Obtuse" || AngleType == "Rigt") {
-        cout << fixed << setprecision(4) << "Angle 1: " << angle1 * angleInRadians << "\n"
-             << "Angle 2: " << angle2 * angleInRadians << "\n"
-             << "Angle 3: " << angle3 * angleInRadians << "\n" << AngleType << endl;
+    string angleName;
+    if(pow(lengthOne, 2) + pow(lengthTwo, 2) > pow(lengthThree, 2)) {
+        angleName = "Acute";
+    }
+    else if (pow(lengthTwo, 2) < pow(lengthOne, 2) + pow(lengthTwo, 2)) {
+         angleName = "Obtuse";
+    }
+    else if (pow(lengthOne, 2) + pow(lengthTwo, 2) == pow(lengthThree, 2)) {
+        angleName = "Right";
     }
     else {
-        cout << AngleType << endl;
+        angleName = "Impossible Triangle";
     }
 
-    double name = 67.3801 + 22.6199 + 90;
-
-    cout << name << endl;
-
-
-
+    // output result
+    if(angleName == "Acute" || angleName == "Obtuse" || angleName == "Right") {
+        cout << "Angle 1: " << angleOne * angleInRadian << "\n" << "Angle 2: " << angleTwo * angleInRadian << "\n"
+             << "Angle 3: " << angleThree * angleInRadian << endl;
+    }
+    else {
+        cout << angleName;
+    }
+  
     return 0;
 }
