@@ -1,6 +1,6 @@
 /**
   * @brief Assignment 3
-  * @author Daidemang Francis
+  * @author Daidemang Francis & Dakota Palmer
   */
 
 #include <iostream>
