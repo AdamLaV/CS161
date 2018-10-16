@@ -29,15 +29,15 @@ int main()
 
         // if triangle can be formed -- classifies triangle
             string triangleName;
-          if(pow(lengthThree, 2) < pow(lengthOne, 2) + pow(lengthTwo, 2)) {
-                triangleName = "Acute";
-           }
-           else if (pow(lengthThree, 2) == pow(lengthOne, 2) + pow(lengthTwo, 2)) {
+            if (angleOne * angleInRadian > 90 || angleTwo * angleInRadian  > 90 || angleThree * angleInRadian > 90) {
+                triangleName = "Obtuse";
+             }
+           else if ((abs(angleOne * angleInRadian) + abs(angleTwo * angleInRadian)) == (angleThree * angleInRadian)) {
                 triangleName = "Right";
            }
-          else if (pow(lengthThree, 2) > pow(lengthOne, 2) + pow(lengthTwo, 2)) {
-              triangleName = "Obtuse";
-        }
+           else if(angleOne * angleInRadian < 90 && angleTwo * angleInRadian < 90 && angleThree * angleInRadian < 90) {
+                 triangleName = "Acute";
+           }
 
           cout << "Angle 1: " << angleOne * angleInRadian << "\n" << "Angle 2: " << angleTwo * angleInRadian << "\n"
                << "Angle 3: " << angleThree * angleInRadian << "\n" << triangleName << endl;
