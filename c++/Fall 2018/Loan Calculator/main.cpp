@@ -1,3 +1,7 @@
+/**
+  * @brief Assignment 4
+  * @author Daidemang Francis & Dakota Palmer
+  */
 #include <iostream>
 #include <iomanip>
 #include <cmath>
