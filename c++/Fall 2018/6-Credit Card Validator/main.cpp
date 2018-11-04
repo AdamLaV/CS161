@@ -31,9 +31,6 @@ int main()
     return 0;
 }
 
-
-
-
 // Takes in a string, prints it then get input and returns the input
 string getInput(const string& prompt) {
     cout << prompt;
