@@ -74,6 +74,8 @@ int charToInt(char digit) {
 }
 
 // Sums the digits of a credit card number
+// can't use an array beacuse the card number changes from user to user
+// if the number is constant then an array would be a better approach 
 int sumOfDigits(const string& CardNumber) {
     int cardDigits, sum = 0, evenSum = 0, oddSum = 0;
     int myArray[16];
