@@ -1,5 +1,9 @@
+/**
+  * @brief Assignment 6
+  * @author Daidemang Francis & Dakota Palmer
+*/
 #include <iostream>
-#include "cradFunctions.h"
+#include "cardFunctions.h"
 #include <string>
 using namespace std;
 
