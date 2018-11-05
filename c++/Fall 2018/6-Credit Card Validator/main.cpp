@@ -36,7 +36,7 @@ int main()
 // ----------------------- end testing ------------------ \\
 
 
-// ----------- Final Program ------------- \\
+// ----------- Final Program Part B------------- \\
 
     // Get user input
     string cardNumber;
