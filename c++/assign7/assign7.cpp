@@ -1,7 +1,4 @@
-/**
-  * @brief Assignment 7
-  * @author Daidemang Francis & Dakota Palmer
-*/
+// personal project 
 #include <iostream>
 #include "GradeFunctions.h"
 #include <iomanip>
