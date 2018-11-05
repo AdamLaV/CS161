@@ -1,65 +1,58 @@
+/**
+  * @brief Assignment 6
+  * @author Daidemang Francis & Dakota Palmer
+*/
 #include <iostream>
-#include <fstream>
+#include "cardFunctions.h"
 #include <string>
-#include <stdlib.h>
-#include <stdio.h>
 using namespace std;
-
-string getInput(const string& prompt);
-string getCardType(const string& cardNumber);
-int sumOfDigits(const string& cardNumber);
-int charToInt(char digit);
 
 int main()
 {
-    string card = getInput("Enter Card Number: ");
-    string cardType = getCardType(card);
-    cout << card << " " << cardType << endl;
 
-    return 0;
-}
+// ----------- Function building + testing Part A ------------- \\
+//      string test1 = getCardType(cardNumber);
+//      cout << test1;
+//      bool status = isValid(cardNumber);
+//      cout << status;
 
-// Takes in a string, prints it then get input and returns the input
-string getInput(const string& prompt) {
-    cout << prompt;
+//      string test2 = luhnDigitSum(cardNumber);
+//      cout << test2 << endl;
+
+//    int test3 = luhnDigitSum(cardNumber);
+//    cout << test3 << endl;
+//    cout << "Enter charValue: ";
+//    cin >> test4p1;
+//    cout << "Enter charValue: ";
+//    cin >> test4p2;
+//    char test4p1 = '3', test4p2 = '3';
+//    int test4Total = 0;
+//    test4Total += charToInt(test4p1);
+//    test4Total += charToInt(test4p2);
+//    cout << test4Total << endl;
+
+//    int testResult = doubleDigitValue(4);
+//    cout << testResult << endl;
+// ----------------------- end testing ------------------ \\
+
+
+// ----------- Final Program ------------- \\
+
+    // Get user input
     string cardNumber;
+    cout << "Enter card number: ";
     cin >> cardNumber;
-    return cardNumber;
-}
 
-// Return a string representing the type of crdit card a number is: VISA, MASTERCARD, AMERICAN EXPRESS, OR UNKNOWN
-string getCardType(const string& cardNumber) {
-    string cardType = "";
-    if(cardNumber.at(0) == '4') {
-        cardType = "VISA";
-    }
-    else if (cardNumber.at(0) == '5') {
-        cardType = "MASTERCARD";
-    }
-    else if (cardNumber.at(1) == '4' || (cardNumber.at(1) == '7' && cardNumber.at(0) == '3')) {
-        cardType = "AMERICAN EXPRESS";
+    // validate card number
+    string cardType = getCardType(cardNumber);
+    bool status = isValid(cardNumber);
+
+    if(status == 1) {
+        cout << "Valid number, " << cardType << endl;
     }
     else {
-        cardType = "UNKNOWN ISSUER";
+        cout << "Not a valid number, " << cardType << endl;
     }
-    return cardType;
-}
 
-// sum of digit
-int sumOfDigits(const string& cardNumber) {
-    int total_num = cardNumber.length();
-    int card[total_num];
-    int sum = 0;
-
-    for(int i = 0; i < total_num; i++) {
-        card[i] = charToInt(cardNumber[i]);
-        sum += card[i];
-    }
-    return sum;
-}
-
-// charToInt
-int charToInt(char digit) {
-    int digitValue = digit - '0';
-    return digitValue;
+    return 0;
 }
