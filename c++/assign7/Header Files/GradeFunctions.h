@@ -4,7 +4,7 @@
 /**
  * @brief getArrayData - read in values from the keyboard into the array
  * @param scores - array of student scores
- * @param size - array total size
+ * @param size - size of the array
  */
 void getArrayData(int scores[], int size);
 
