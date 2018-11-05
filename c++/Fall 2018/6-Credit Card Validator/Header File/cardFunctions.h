@@ -38,3 +38,4 @@ int charToInt(char digit);
  */
 int doubleDigitValue(int number);
 #endif // CRADFUNCTIONS_H
+
