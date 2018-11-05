@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-//#include <algorithm> // std::reverse
 #include "cradFunctions.h"
 using namespace std;
 
