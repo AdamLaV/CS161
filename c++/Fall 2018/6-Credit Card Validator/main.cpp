@@ -46,7 +46,9 @@ int main()
     if(status == 1) {
         cout << "Valid number, " << cardType << endl;
     }
-
+    else {
+        cout << "Not a valid number, " << cardType << endl;
+    }
 
     return 0;
 }
