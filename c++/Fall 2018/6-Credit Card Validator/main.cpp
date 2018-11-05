@@ -43,7 +43,7 @@ int main()
     cout << "Enter card number: ";
     cin >> cardNumber;
 
-    // validate card number
+    // validate card number & output result
     string cardType = getCardType(cardNumber);
     bool status = isValid(cardNumber);
 
