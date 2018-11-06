@@ -1,6 +1,7 @@
 #ifndef CRADFUNCTIONS_H
 #define CRADFUNCTIONS_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 /**
