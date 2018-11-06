@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 
-
 /**
  * @brief getCardType returns a string representing the type of credit card a number is
  * @param cardNumber reference varable -- return card type
