@@ -2,7 +2,7 @@
 #define CRADFUNCTIONS_H
 #include <iostream>
 #include <string>
-using namespace std;
+using namespace std; // remove if your uses std:: 
 
 /**
  * @brief getCardType returns a string representing the type of credit card a number is
