@@ -2,7 +2,6 @@
   * @brief Assignment 7
   * @author Daidemang Francis & Dakota Palmer
 */
-
 #include <iostream>
 #include <cmath>
 #include "hikeFunctions.h"
