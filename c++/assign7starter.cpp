@@ -1,3 +1,5 @@
+// functions -- not completed
+
 // students data function
 void getArrayData(int scores[], int size) {
     string studentsData;

@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
 
-// ----------- Function building + testing Part A ------------- \\
+// ----------- Function building + testing .. Part A ------------- \\
 //      string test1 = getCardType(cardNumber);
 //      cout << test1;
 //      bool status = isValid(cardNumber);
@@ -36,14 +36,14 @@ int main()
 // ----------------------- end testing ------------------ \\
 
 
-// ----------- Final Program ------------- \\
+// ----------- Final Program .. Part B------------- \\
 
     // Get user input
     string cardNumber;
     cout << "Enter card number: ";
     cin >> cardNumber;
 
-    // validate card number
+    // validate card number & output result
     string cardType = getCardType(cardNumber);
     bool status = isValid(cardNumber);
 

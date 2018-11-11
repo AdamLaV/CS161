@@ -1,4 +1,4 @@
-include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <cmath>
 using namespace std;
@@ -15,9 +15,10 @@ int main()
     cout << "Enter APR: ";
     cin >> APR;
 
-    //Compute interest
+    //Compute interest and output result
     cout << "Month " << " Int." << setw(8) << "Pay \t" << "Balance \n";
     while (interestRate >= 0) {
+        // needs if else statement
         cout << fixed << setprecision(2) << month << "   " << setw(8) << interestRate << setw(8) << payment << "\t" << balance << endl;
         month++;
         interestRate = (APR / 100) / 12 * balance;
