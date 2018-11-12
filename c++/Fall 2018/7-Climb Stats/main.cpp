@@ -12,13 +12,27 @@ int main()
 {
     const int HIKE_LENGTH = 9;
     int hikeData[HIKE_LENGTH] = {1200, 3000, 3450, 2800, 2900, 1550, 1750, 1110, 1200};
-    //const int LAST_INDEX  = hikeData.back();
 
     // get hightest points from hikeData
     int firstHalf = getHighestPointBetween(hikeData, 0, 5);
     int secondHalf = getHighestPointBetween(hikeData, 5, 8);
-    cout << firstHalf << " " << secondHalf << endl;
+    int overAllValue;
+    if(firstHalf > secondHalf) {
+        overAllValue = firstHalf;
+    }
+    else {
+        overAllValue = secondHalf;
+    }
+
+    double average = getAverage(hikeData, HIKE_LENGTH);
+    int peaks = getNumPeaks(hikeData, HIKE_LENGTH);
+    int segments = getNumSteepSegments(hikeData, HIKE_LENGTH);
+
+    // output data
+    cout <<"Highest Points: \n" <<"  First half: "
+         << firstHalf << "\n" <<"  Second half: "<< secondHalf <<"\n"
+         <<"  Overall: " << overAllValue <<"\n "<<"Average elevation: " << average << "\n"
+         <<"Peaks: "<< peaks << "\n" <<"Difficult segments: " << segments << endl;
 
     return 0;
 }
-
