@@ -1,5 +1,4 @@
 #include <iostream>
-#include <array>
 #include "hikeFunctions.h"
 using namespace std;
 
