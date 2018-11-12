@@ -37,11 +37,11 @@ int getNumPeaks(const int heights[], int size);
 int getNumSteepSegments(const int heights[], int size);
 
 /**
- * @brief fetTotalChnage
- * @param heigths
- * @param startMile
- * @param endMile
- * @return 
+ * @brief getTotalChnage compute the total chnage covered the hike (uphill or downhill)
+ * @param heigths array with hiking data 
+ * @param startMile starting position
+ * @param endMile ending position
+ * @return the total elevetion chnage over the range from startMile to endMile
  */
 int getTotalChnage(const int heigths[], int startMile, int endMile);
 #endif // HIKEFUNCTIONS_H
