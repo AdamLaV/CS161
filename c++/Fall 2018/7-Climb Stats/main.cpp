@@ -4,6 +4,7 @@
 */
 #include <iostream>
 #include <cmath>
+#include <array>
 #include "hikeFunctions.h"
 using namespace std;
 
@@ -26,12 +27,14 @@ int main()
     double average = getAverage(hikeData, HIKE_LENGTH);
     int peaks = getNumPeaks(hikeData, HIKE_LENGTH);
     int segments = getNumSteepSegments(hikeData, HIKE_LENGTH);
+    int totalChange = getTotalChnage(hikeData, 0, 8);
 
     // output data
     cout <<"Highest Points: \n" <<"  First half: "
          << firstHalf << "\n" <<"  Second half: "<< secondHalf <<"\n"
          <<"  Overall: " << overAllValue <<"\n "<<"Average elevation: " << average << "\n"
-         <<"Peaks: "<< peaks << "\n" <<"Difficult segments: " << segments << endl;
+         <<"Peaks: "<< peaks << "\n" <<"Difficult segments: " << segments <<"\n" <<
+           "Elevation Chnage: " << totalChange << endl;
 
     return 0;
 }
