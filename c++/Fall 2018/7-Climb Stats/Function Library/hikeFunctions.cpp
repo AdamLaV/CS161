@@ -75,3 +75,4 @@ int getTotalChnage(const int heights[], int startMile, int endMile) {
     }
     return totalChange;
 }
+
