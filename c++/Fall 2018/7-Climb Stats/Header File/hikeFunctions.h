@@ -43,6 +43,6 @@ int getNumSteepSegments(const int heights[], int size);
  * @param endMile
  * @return 
  */
-int fetTotalChnage(const int heigths[], int startMile, int endMile);
+int getTotalChnage(const int heigths[], int startMile, int endMile);
 #endif // HIKEFUNCTIONS_H
 
