@@ -41,7 +41,7 @@ int getNumPeaks(const int heights[], int size) {
     return peaks;
 }
 
-// getNumSteepSegments function
+// getNumSteepSegments function : needs works 👺 🤖
 int getNumSteepSegments(const int heights[], int size) {
     int segments = 0;
     for(int i = 0; i < size; i++) {
