@@ -62,7 +62,7 @@ int getNumSteepSegments(const int heights[], int size) {
 }
 
 // getTotalChnage function
-int getTotalChnage(const int heights[], int startMile, int endMile) {
+int getTotalChange(const int heights[], int startMile, int endMile) {
     int totalChange = 0;
     for(int i = startMile; i < endMile; i++) {
         int currentValue = heights[i], nextValue = heights[i+1];
