@@ -1,3 +1,3 @@
-#### Not Completed 
+#### Done!
 
-###### // getNumSteepSegments function returns 3 insted of 2 
+
