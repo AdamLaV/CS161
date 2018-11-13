@@ -2,6 +2,14 @@
 #include "hikeFunctions.h"
 using namespace std;
 
+// getData function
+void getData(int heights[], int size) {
+    cout << "Enter elevations: ";
+    for(int i = 0; i < size; i++) {
+        cin >> heights[i];
+    }
+}
+
 // getHighestPointBetween function
 int getHighestPointBetween(const int heights[], int startMile, int endMile) {
     int highestPoint = heights[0], swapValue = heights[1];
@@ -40,14 +48,15 @@ int getNumPeaks(const int heights[], int size) {
     return peaks;
 }
 
-// getNumSteepSegments function : needs works 👺 🤖
+// getNumSteepSegments function
 int getNumSteepSegments(const int heights[], int size) {
     int segments = 0;
     for(int i = 0; i < size; i++) {
+       // bool segmentsChange = false;
         int currentValue = heights[i], nextValue = heights[i+1];
         if(currentValue > nextValue) {
             currentValue -= nextValue;
-            if(currentValue >= 1000) {
+            if(currentValue >= 1000 && currentValue - 1000 >= nextValue) {
                 segments++;
             }
         }
@@ -75,4 +84,3 @@ int getTotalChange(const int heights[], int startMile, int endMile) {
     }
     return totalChange;
 }
-
