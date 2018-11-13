@@ -43,5 +43,5 @@ int getNumSteepSegments(const int heights[], int size);
  * @param endMile ending position
  * @return the total elevetion chnage over the range from startMile to endMile
  */
-int getTotalChnage(const int heights[], int startMile, int endMile);
+int getTotalChange(const int heights[], int startMile, int endMile);
 #endif // HIKEFUNCTIONS_H
