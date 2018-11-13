@@ -10,9 +10,11 @@ using namespace std;
 int main()
 {
     const int HIKE_LENGTH = 9;
-    int hikeData[HIKE_LENGTH] = {1200, 3000, 3450, 2800, 2900, 1550, 1750, 1110, 1200};
+    // get data from console
+    int hikeData[HIKE_LENGTH];
+    getData(hikeData, HIKE_LENGTH);
 
-    // get hightest points from hikeData
+    // compute data
     int firstHalf = getHighestPointBetween(hikeData, 0, 5);
     int secondHalf = getHighestPointBetween(hikeData, 5, 8);
     int overAllValue;
@@ -31,9 +33,9 @@ int main()
     // output data
     cout <<"Highest Points: \n" <<"  First half: "
          << firstHalf << "\n" <<"  Second half: "<< secondHalf <<"\n"
-         <<"  Overall: " << overAllValue <<"\n "<<"Average elevation: " << average << "\n"
+         <<"  Overall: " << overAllValue <<"\n "<<" Average elevation: " << average << "\n"
          <<"Peaks: "<< peaks << "\n" <<"Difficult segments: " << segments <<"\n" <<
-           "Elevation Chnage: " << totalChange << endl;
+           "Elevation Change: " << totalChange << endl;
 
     return 0;
 }
