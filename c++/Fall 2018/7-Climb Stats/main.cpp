@@ -26,7 +26,7 @@ int main()
     double average = getAverage(hikeData, HIKE_LENGTH);
     int peaks = getNumPeaks(hikeData, HIKE_LENGTH);
     int segments = getNumSteepSegments(hikeData, HIKE_LENGTH);
-    int totalChange = getTotalChnage(hikeData, 0, 8);
+    int totalChange = getTotalChange(hikeData, 0, 8);
 
     // output data
     cout <<"Highest Points: \n" <<"  First half: "
