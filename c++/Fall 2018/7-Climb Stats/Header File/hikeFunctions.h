@@ -4,6 +4,13 @@
 using namespace std;
 
 /**
+ * @brief getData read data into array fron console
+ * @param heights array to store data
+ * @param size of the array
+ */
+void getData(int heights[], int size);
+
+/**
  * @brief getHighestPointBetween compute first & second half highest point of the hike
  * @param heights array with hiking data
  * @param startMile beginning of hike data
