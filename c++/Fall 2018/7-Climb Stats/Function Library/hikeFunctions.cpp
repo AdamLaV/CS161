@@ -31,7 +31,7 @@ double getAverage(const int heigths[], int size) {
     for(int i = 0; i < size; i++) {
         average += heigths[i];
     }
-    average /= 9;
+    average /= size;
 
     return average;
 
