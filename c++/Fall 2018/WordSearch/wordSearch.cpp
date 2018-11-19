@@ -1,3 +1,7 @@
+/**
+  * @brief Assignment 8
+  * @author Daidemang Francis & Dakota Palmer
+  */
 #include <iostream>
 #include <string>
 #include <algorithm>
