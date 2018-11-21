@@ -4,12 +4,8 @@
   */
 #include <iostream>
 #include <string>
-#include <algorithm>
-#include <array>
 #include "wordSearch.h"
 using namespace std;
-//const int PUZZLE_SIZE = 10;
-
 
 char gridKeys[PUZZLE_SIZE][PUZZLE_SIZE] = {
    {'H','_','_','_','_','_','_','_','_','_'},
@@ -39,13 +35,6 @@ void printKey(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
 // printPuzzle function
 void printPuzzle(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
     grid = gridKeys;
-//    // create a copy of gridkeys
-//    char gridKeysCopy[PUZZLE_SIZE][PUZZLE_SIZE];
-//    for(int i = 0; i < PUZZLE_SIZE; i++) {
-//        for(int j = 0; j < PUZZLE_SIZE; j++) {
-//            gridKeysCopy[i][j] = gridKeys[i][j];
-//        }
-//    }
 
     // add random letter to blank psaces in grid
     srand(time(0));
@@ -62,62 +51,63 @@ void printPuzzle(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
         }
         cout << endl;
     }
-
-//    // output the final puzzle
-//    grid = gridKeys;
-//    for(int i = 0; i < PUZZLE_SIZE; i++) {
-//        for(int j = 0; j < PUZZLE_SIZE; j++) {
-//            cout << grid[i][j] << " ";
-//        }
-//        cout << endl;
-//    }
 }
 
 // checkHorizontalFit function
 bool checkHorizontalFit(const char grid[PUZZLE_SIZE][PUZZLE_SIZE], int row, int col, string word, bool forward) {
-    bool WordFits = 1;
+    grid = gridKeys;
+    bool checker = false;
+    int wordLength = word.length();
+    if(col + wordLength > PUZZLE_SIZE) {
+        return false;
+    }
+    else {
+        if(forward == true) {
+            for(int i = 0; i < wordLength; i++) {
+                if(grid[row][col + i] == '-' || word.at(i) == grid[row][col + i]) {
+                    checker = true;
+                }
+                else {
+                    checker = false;
+                }
+            }
+          }
 
-    // forward
-    if(forward == 0) {
-        for(size_t i = 0; i < word.length(); i++) {
-            if(grid[row][col + 1] != word.at(i) && grid[row][col + 1] != ' ') {
-               WordFits = 0;
+        else if(forward == false) {
+            for(int i = 0; i < wordLength; i++) {
+                if(grid[row][col - i] == '-' || word.at(i) == grid[row][col - i]) {
+                    checker = true;
+                }
+                else {
+                    checker = false;
+                }
             }
         }
     }
 
-
-
-
-    if(WordFits) {
+    if(checker == true) {
         return true;
     }
     else {
         return false;
     }
 
-
 }
 
 // addHorizontalWord function
 void addHorizontalWord(char grid[PUZZLE_SIZE][PUZZLE_SIZE], int row, int col, string word, bool forward) {
-    //size_t wordSize = word.length();
+    grid = gridKeys;
     char currentLetter;
-    if(forward) {
+    if(forward == true) {
         for(size_t i = 0; i < word.length(); i++) {
             currentLetter = word.at(i);
-            grid[row][col + 1] = currentLetter;
+            grid[row][col + i] = currentLetter;
         }
     }
-    else {
-        // reverse word
-        for(size_t i = 0; i < word.length() / 2; i++) {
-            swap(word[i], word[word.length() - i - 1]);
-        }
-
+    else if(forward == false) {
         for(size_t i = 0; i < word.length(); i++) {
             currentLetter = word.at(i);
-            grid[row][col + 1] = currentLetter;
+            grid[row][col - i] = currentLetter;
         }
     }
 
@@ -125,17 +115,18 @@ void addHorizontalWord(char grid[PUZZLE_SIZE][PUZZLE_SIZE], int row, int col, st
 
 // addVerticalWord function
 void addVerticalWord(char grid[PUZZLE_SIZE][PUZZLE_SIZE], int row, int col, string word) {
+    grid = gridKeys;
     char currentLetter;
     for(size_t i = 0; i < word.length(); i++) {
         currentLetter = word.at(i);
-        grid[row + 1][col] = currentLetter;
+        grid[row + i][col] = currentLetter;
     }
 }
 
 // spaceCount function
 int spaceCount(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
+    grid = gridKeys;
     int blankSpaces = 0;
-
     for(int i = 0; i < PUZZLE_SIZE; i++) {
         for(int j = 0; j < PUZZLE_SIZE; j++) {
             if(grid[i][j] == '_') {
@@ -149,7 +140,33 @@ int spaceCount(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
 
 // printLargestHorizontalGaps function
 void printLargestHorizontalGaps(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
-    char a = grid[0][0];
-    cout << a;
+    grid = gridKeys;
+    cout << "ROW" << "  " << "GAP SIZE" << "  " << "Start Col" << endl;
+    // find gap Size
+    int startCol;
+    for(int i = 0; i < PUZZLE_SIZE; i++) {
+        int gapSize = 0, temp = 0;
+        for(int j = 0; j < PUZZLE_SIZE; j++) {
+            if(grid[i][j] == '_') {
+                gapSize++;
+            }
+            if((grid[i][j] != '_' || grid[i][j] == '-') && (grid[i][j + 1] != '_' || grid[i][j + 1] == '_')) {
+                temp += gapSize;
+                gapSize = 0;
+            }
+
+        }
+
+        if(temp > gapSize) {
+            cout << i << "      " << temp << "      " << startCol << endl;
+
+        }
+        else {
+            cout << i << "      " << gapSize << "      " << startCol << endl;
+
+        }
+        startCol = 0;
+    }
 
 }
+
