@@ -11,9 +11,9 @@ void printMainMenu(int &userInput) {
     cout << endl;
      userInput = 0;
     cout << "Welcome to Oregon Education Record Program. \n"
-         << "Enter 1 to print a particular county record: \n"
+         << "Enter 1 to print a particular record: \n"
          << "Enter 2 to find matching records: \n"
-         << "Enter 3 to find max/min: \n"
+         << "Enter 3 to find lowest and highest cost per student in a particular county: \n"
          << "Enter 4 to print aggregate data: " << endl;
     cin >> userInput;
 }
@@ -64,4 +64,30 @@ void getRecord(const EducationalInstitution& r) {
     cout << r.districtID << setw(13) << r.districtNumber
          << setw(14) << "$" << r.operatingCostPerStudent
          << setw(13) <<" " << r.countyName << endl;
+}
+
+// printMinAndMax function
+void printMinAndMax(const EducationalInstitution districts[], const int size) {
+    string countyName;
+    cout << "Enter name of county: ";
+    cin >> countyName;
+    transform(countyName.begin(), countyName.end(), countyName.begin(), ::toupper);
+    cout << countyName << " County Operating Cost Per Student \n";
+    double low = 0, high = 0, temp = 0;
+    for(int i = 0; i < size; i++) {
+        if(districts[i].countyName == countyName) {
+            low = districts[i].operatingCostPerStudent;
+            high = districts[i+1].operatingCostPerStudent;
+
+            if (low > high) {
+                temp = high;
+                high = low;
+                low = temp;
+              }
+          }
+        }
+
+        cout << "Highest Cost: $" << high <<" \n"
+        << "Lowest Cost: $" << low << "\n"
+        << "---------------------------------------------" << endl;
 }
