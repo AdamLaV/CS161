@@ -2,6 +2,8 @@
 #define OREGONEDUCATION_H
 #include <string>
 using namespace std;
+const int NUM_DISTRICTS = 375;
+
 /**
  * @brief printMainMenu print the main menu for the program
  * @param userInput input form the keyboard
@@ -17,6 +19,10 @@ struct EducationalInstitution {
     string districtNumber;
     double operatingCostPerStudent;
     string countyName;
+};
+
+struct DistrictCost {
+    double amout;
 };
 
 /**
@@ -40,5 +46,12 @@ void printDistrict(const EducationalInstitution& d, string& countyName);
  * @param r struct array with data
  */
 void getRecord(const EducationalInstitution& r);
+
+/**
+ * @brief printMinAndMax print the hightest and lowest operating cost per student in a particular county
+ * @param districts array with highest and lowest data
+ * @param size size of the array
+ */
+void printMinAndMax(const EducationalInstitution districts[NUM_DISTRICTS], const int size);
 
 #endif // OREGONEDUCATION_H
