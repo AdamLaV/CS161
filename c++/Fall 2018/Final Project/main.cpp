@@ -18,7 +18,7 @@ int main()
     inFile.open("OregonEducation.txt");
 
     const int NUM_DISTRICTS = 375;
-    //declare an array of 375 districts:
+    //declare an array of 375 districts: -- PART TWO
     EducationalInstitution districts[NUM_DISTRICTS];
     for(int i = 0; i < NUM_DISTRICTS; i++) {
         string data;
@@ -31,9 +31,9 @@ int main()
     printMainMenu(userInput);
     while(userInput != 0) {
 
-        // find matching record
+        // find matching record -- PART THREE
+        string countyName; // -- use in part two & three -- //
         if(userInput == 2) {
-            string countyName;
             cout << "Enter name of county: ";
             cin >> countyName;
             transform(countyName.begin(), countyName.end(), countyName.begin(), ::toupper);
@@ -42,23 +42,47 @@ int main()
             for(int i = 0; i < NUM_DISTRICTS; i++) {
                     printDistrict(districts[i], countyName);
                 }
+
+            // return to main menu
+            printMainMenu(userInput);
         }
 
-        // return to main menu
-        printMainMenu(userInput);
-
-        // print a particular record
-        if(userInput == 1) {
+        // print a particular record -- PART FOUR
+        else if(userInput == 1) {
             int recordAmount;
             cout << "Enter the amout of record to print: ";
             cin >> recordAmount;
             for(int i = 0; i < recordAmount; i++) {
                 getRecord(districts[i]);
             }
+
+            // return to main menu
+            printMainMenu(userInput);
         }
 
-        // return to main menu
-        printMainMenu(userInput);
+        // finding max/min -- PART FIVE
+        else if(userInput == 3) {
+            printMinAndMax(districts, NUM_DISTRICTS);
+                // return to main menu
+                printMainMenu(userInput);
 
-    }
+           }
+
+        else if (userInput != 0 || userInput > 4 || !isnumber(userInput)) {
+            int errorRespond;
+            cout << "Sorry wrong Input. \n"
+                 << "Enter 1 to return to the main menu. \n"
+                 << "Or 0 to exit." << endl;
+            cin >> errorRespond;
+
+            if(errorRespond == 1) {
+                printMainMenu(userInput);
+            }
+            else if (errorRespond == 0) {
+                break;
+            }
+        }
+
+  }
+    return 0;
 }
