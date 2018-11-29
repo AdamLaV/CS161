@@ -67,6 +67,12 @@ int main()
                 printMainMenu(userInput);
 
            }
+        // aggregate data -- part 6
+        else if (userInput == 4) {
+            printAggregateData(districts, NUM_DISTRICTS);
+            // return to main menu
+            printMainMenu(userInput);
+        }
 
         else if (userInput != 0 || userInput > 4 || !isnumber(userInput)) {
             int errorRespond;
@@ -85,4 +91,5 @@ int main()
 
   }
     return 0;
+
 }
