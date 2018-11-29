@@ -21,9 +21,6 @@ struct EducationalInstitution {
     string countyName;
 };
 
-struct DistrictCost {
-    double amout;
-};
 
 /**
  * @brief parseDistrict turns a string like "2110,NYSSA SCH DIST 26,$7595.11,MALHEUR" into
@@ -53,5 +50,13 @@ void getRecord(const EducationalInstitution& r);
  * @param size size of the array
  */
 void printMinAndMax(const EducationalInstitution districts[NUM_DISTRICTS], const int size);
+
+
+/**
+ * @brief printAggregateData generate aggregate data based on user input
+ * @param districts array with data
+ * @param size size of the array
+ */
+void printAggregateData(const EducationalInstitution districts[NUM_DISTRICTS], const int size);
 
 #endif // OREGONEDUCATION_H
