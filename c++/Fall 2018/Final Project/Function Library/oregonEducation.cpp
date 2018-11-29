@@ -91,3 +91,24 @@ void printMinAndMax(const EducationalInstitution districts[], const int size) {
         << "Lowest Cost: $" << low << "\n"
         << "---------------------------------------------" << endl;
 }
+
+// printAggregateData function
+void printAggregateData(const EducationalInstitution districts[], const int size) {
+    string countyName;
+    int totalSchools = 0, avareag = 0;
+    cout << "Enter County Name: ";
+    cin >> countyName;
+    transform(countyName.begin(), countyName.end(), countyName.begin(), ::toupper);
+
+    for(int i = 0; i < size; i++) {
+        if(districts[i].countyName == countyName) {
+            totalSchools++;
+            avareag += districts[i].operatingCostPerStudent;
+        }
+    }
+
+    avareag /= totalSchools;
+
+    cout << "There are " << totalSchools << " school(s) in " << countyName <<" county \n"
+         << "With the average operating cost per student of: $"  << avareag << endl;
+}
