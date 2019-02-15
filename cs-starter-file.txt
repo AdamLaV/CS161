@@ -1,4 +1,0 @@
-/**
-  * @brief Assignment #
-  * @author Daidemang Francis
-  */
