@@ -1,8 +1,3 @@
-/**
-  * @brief Assignment 2
-  * @author Francis
-  */
-
 #include <iostream>
 
 using namespace std;
