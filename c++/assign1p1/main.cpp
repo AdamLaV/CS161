@@ -1,7 +1,3 @@
-/**
-  * @brief Assignment 1 Problem 1
-  * @author Daidemang Francis
-  */
 #include <iostream>
 
 using namespace std;
