@@ -1,5 +1,3 @@
-// personal project 
-#include <iostream>
 #include "GradeFunctions.h"
 #include <iomanip>
 #include <cmath>
