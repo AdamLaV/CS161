@@ -10,5 +10,5 @@ var fourDigitNum = prompt("Enter a four digit number: ");
 console.log(fourDigitNum % 10);
 for (var i = 0; i < 3; i++) {
 	fourDigitNum /= 10;
-console.log(Math.floor(fourDigitNum % 10));
+	console.log(Math.floor(fourDigitNum % 10));
 }
