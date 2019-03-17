@@ -1,2 +1,1 @@
-## PhotoChop Project
-#### Competed 
+### PhotoChop Project
