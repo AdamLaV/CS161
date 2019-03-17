@@ -167,5 +167,4 @@ void printLargestHorizontalGaps(const char grid[PUZZLE_SIZE][PUZZLE_SIZE]) {
         }
         startCol = 0;
     }
-
 }
