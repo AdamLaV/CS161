@@ -1,1 +1,1 @@
-Make twoor more functions that create or modify an existing image using the PhotoChop code
+#### Read [PhotoChop Guide]() for more details.
