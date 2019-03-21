@@ -1,4 +1,4 @@
 ## PhotoChop Project
 
 ### Instruction
-######  Make two or more functions that create or modify an existing image using the PhotoChop [starter code]
+######  Make two or more functions that create or modify an existing image using the PhotoChop [starter code](https://github.com/simplycs/CS161/tree/master/c%2B%2B/Fall%202018/PhotoChop/Starter%20Code)
