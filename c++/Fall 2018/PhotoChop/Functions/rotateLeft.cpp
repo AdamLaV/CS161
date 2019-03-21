@@ -16,3 +16,4 @@ void rotateLeft(Image& source) {
 
     source = newImage;
 }
+
