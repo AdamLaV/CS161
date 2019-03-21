@@ -5,4 +5,4 @@
 
 ### Completed Functions:
 
-#### [onlyRed]()
+#### [onlyRed](https://github.com/simplycs/CS161/blob/master/c%2B%2B/Fall%202018/PhotoChop/Functions/onlyRed.cpp)
